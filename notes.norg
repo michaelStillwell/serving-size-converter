@@ -1,0 +1,16 @@
+* Serving Size Converter
+
+  A simple app to be able to convert an ingredient list to chosen serving size to help reduce the
+  pain of increasing or decreasing ingredient numbers.
+
+** TODO
+  
+
+   ___
+
+   - (?) connect to turso
+
+   ___
+
+   - (x) display correctly calculated amounts
+   - (x) style page

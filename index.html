@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+	<head>
+		<title>Serving Size Converter</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet">
+		<link
+				href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css"
+				rel="stylesheet"
+				type="text/css"
+				/>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="p-[8px] pt-4 md:p-4 flex justify-center items-center">
+
+		<main class="min-w-[335px] max-w-[1200px]">
+			<div class="flex">
+				<div id="input" class="flex flex-wrap justify-center lg:justify-start mb-3">
+					<div class="w-full lg:w-auto flex flex-wrap">
+						<div class="grow mr-4">
+							<label for="name" class="label">
+								<span class="label-text">Name:</span>
+							</label>
+							<input id="name" class="input input-bordered w-full" type="text">
+						</div>
+
+						<div class="grow">
+							<label for="amount" class="label">
+								<span class="label-text">Amount:</span>
+							</label>
+							<div class="join w-full flex">
+								<input id="amount" class="join-item input input-bordered grow" type="number" min="1">
+								<select id="measurement" class="join-item select select-bordered"></select>
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full lg:w-auto flex items-end">
+						<div class="grow mr-4">
+							<label for="serving" class="label">
+								<span class="label-text">Serving size:</span>
+							</label>
+							<input id="serving" class="input input-bordered mr-4 w-full" type="number" min="1">
+						</div>
+						<button id="add-ingredient" class="btn btn-primary">Add</button>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="h-0 border-[1px] border-neutral my-8"></div>
+
+			<div id="output" class="flex flex-col items-end">
+				<div>
+					<label for="serving-size" class="label">
+						<span class="label-text">Current Serving Size:</span>
+					</label>
+					<input id="serving-size" type="number" class="input input-bordered" min="1">
+				</div>
+
+				<table class="table table-zebra">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Amount</th>
+							<th>Measurement</th>
+						</tr>
+					</thead>
+
+					<tbody id="ingredient-list"></tbody>
+				</table>
+			</div>
+
+		</main>
+
+		<script src="index.js"/>
+			</body>
+</html>
